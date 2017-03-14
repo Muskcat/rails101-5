@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-  ende
+  end
 
   def edit
     @group = Group.find(params[:id])
@@ -40,12 +40,10 @@ class GroupsController < ApplicationController
     @group.destroy
     redirect_to groups_path, alert: 'Group deleted'
   end
-end
 
   private
 
   def group_params
     params.require(:group).permit(:title, :description)
   end
-
 end
