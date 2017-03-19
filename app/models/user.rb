@@ -13,7 +13,7 @@ class User < ApplicationRecord
          participated_groups.include?(group)
        end
        def join!(group)
-         perticipated_groups << group
+         participated_groups << group
        end
        def quit!(group)
          participated_groups.delete(group)
